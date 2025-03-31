@@ -96,6 +96,12 @@ button.addEventListener('click', (e) =>{
   // aggiungo il nuovo membro al team
   teamMembers.push(newMember);
   renderTeam(teamMembers);
+
+  //resetto il form
+  name.value = '';
+  role.value = '';
+  email.value = '';
+  img.value = '';
 })
 
 
