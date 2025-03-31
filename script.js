@@ -76,4 +76,21 @@ const email = document.getElementById('email');
 const button = document.querySelector('.btn');
 const memberList = document.getElementById('team-members');
 
+button.addEventListener('click', (e) =>{
+  e.preventDefault();
+
+  // recupero i valori del form
+  let nameValue = name.value;
+  let roleValue = role.value;
+  let emailValue = email.value;
+  let imgValue = img.value;
+
+  let newMember = {
+    name: nameValue,
+    role: roleValue,
+    email: emailValue,
+    img: imgValue
+  }
+})
+
 
