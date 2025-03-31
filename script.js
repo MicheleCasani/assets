@@ -43,7 +43,7 @@ const createMemberCard = (member) => {
             <div class="card mb-3 " style="max-width: 540px;">
                 <div class="row g-0">
                   <div class="col-md-4">
-                    <img src="./${member.img}" class="img-fluid rounded-start" alt="...">
+                    <img src="${member.img}" class="img-fluid rounded-start" alt="...">
                   </div>
                   <div class="col-md-8">
                     <div class="card-body">
@@ -73,6 +73,7 @@ renderTeam();
 const name = document.getElementById('name');
 const role = document.getElementById('role');
 const email = document.getElementById('email');
+const img = document.getElementById('image');
 const button = document.querySelector('.btn');
 const memberList = document.getElementById('team-members');
 
@@ -91,6 +92,10 @@ button.addEventListener('click', (e) =>{
     email: emailValue,
     img: imgValue
   }
+
+  // aggiungo il nuovo membro al team
+  teamMembers.push(newMember);
+  renderTeam(teamMembers);
 })
 
 
