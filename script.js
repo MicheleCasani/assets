@@ -68,3 +68,12 @@ const renderTeam = () => {
 }
 // richiamo la funzione per visualizzare a schero le card del team
 renderTeam();
+
+// recupero gli elementi del dom per il form
+const name = document.getElementById('name');
+const role = document.getElementById('role');
+const email = document.getElementById('email');
+const button = document.querySelector('.btn');
+const memberList = document.getElementById('team-members');
+
+
