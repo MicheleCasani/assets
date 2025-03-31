@@ -36,3 +36,23 @@ const teamMembers = [
     img: "img/female3.png"
   }
 ];
+
+//creo la funzione per creare a schermo la card di ogni membro del team
+const createMemberCard = (member) => {
+  let card = `<div class="col-12">
+            <div class="card mb-3 text-light" style="max-width: 540px;">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="./${member.img}" class="img-fluid rounded-start" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">${member.name}</h5>
+                      <p class="card-text">${member.role}</p>
+                      <p class="card-text text-primary">${member.email}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>`
+}
