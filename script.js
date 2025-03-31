@@ -39,17 +39,17 @@ const teamMembers = [
 
 //creo la funzione per creare a schermo la card di ogni membro del team
 const createMemberCard = (member) => {
-  let card = `<div class="col-4">
+  let card = `<div class="col-lg-6 col-md-12 col-sm-12">
             <div class="card mb-3 " style="max-width: 540px;">
                 <div class="row g-0">
-                  <div class="col-md-4">
+                  <div class="col-md-4 col-sm-4">
                     <img src="${member.img}" class="img-fluid rounded-start" alt="...">
                   </div>
-                  <div class="col-md-8">
+                  <div class="col-md-8 col-sm-8">
                     <div class="card-body">
                       <h5 class="card-title">${member.name}</h5>
                       <p class="card-text">${member.role}</p>
-                      <p class="card-text text-primary">${member.email}</p>
+                      <p class="card-text text-success">${member.email}</p>
                     </div>
                   </div>
                 </div>
@@ -97,11 +97,12 @@ button.addEventListener('click', (e) =>{
   teamMembers.push(newMember);
   renderTeam(teamMembers);
 
-  //resetto il form
+  //reseto il form
   name.value = '';
   role.value = '';
   email.value = '';
   img.value = '';
 })
+
 
 
