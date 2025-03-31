@@ -55,10 +55,16 @@ const createMemberCard = (member) => {
                 </div>
               </div>
         </div>`;
-  document.getElementById('team-members').innerHTML += card;
+  return card;
 }
 
-//Creo il ciclo per visualizzare a schermo tutti i membri del team
-for (let i =0; i < teamMembers.length; i++){
-  createMemberCard(teamMembers[i]);
+//creo una funzione per visualizzare a schermo tutte le card del team
+const renderTeam = () => {
+  let cards = '';
+  for (let i = 0; i < teamMembers.length; i++) {
+    cards += createMemberCard(teamMembers[i]);
+  }
+  document.getElementById('team-members').innerHTML = cards;
 }
+// richiamo la funzione per visualizzare a schero le card del team
+renderTeam();
