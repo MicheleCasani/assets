@@ -39,7 +39,7 @@ const teamMembers = [
 
 //creo la funzione per creare a schermo la card di ogni membro del team
 const createMemberCard = (member) => {
-  let card = `<div class="col-12">
+  let card = `<div class="col-4">
             <div class="card mb-3 text-light" style="max-width: 540px;">
                 <div class="row g-0">
                   <div class="col-md-4">
@@ -54,5 +54,11 @@ const createMemberCard = (member) => {
                   </div>
                 </div>
               </div>
-        </div>`
+        </div>`;
+  document.getElementById('team-members').innerHTML += card;
+}
+
+//Creo il ciclo per visualizzare a schermo tutti i membri del team
+for (let i =0; i < teamMembers.length; i++){
+  createMemberCard(teamMembers[i]);
 }
